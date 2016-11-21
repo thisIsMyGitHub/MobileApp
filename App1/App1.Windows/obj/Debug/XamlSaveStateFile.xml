@@ -1,0 +1,11 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\navil\desktop\programs\msa\xamrin\new folder\app1\app1.windows\obj\debug\intermediatexaml\app1.windows.exe" HashGuid="37cecc81-c905-213c-4e0a-5e2847137af3" />
+    <ReferenceAssembly PathName="c:\users\navil\desktop\programs\msa\xamrin\app\app1\app1\bin\debug\app1.dll" HashGuid="cde345c6-59ba-bde9-270e-e9c887d32124" />
+    <ReferenceAssembly PathName="c:\users\navil\desktop\programs\msa\xamrin\app\packages\xamarin.forms.2.3.2.127\lib\win81\xamarin.forms.core.dll" HashGuid="725dee27-7376-6787-2b92-d2b102c486d4" />
+    <ReferenceAssembly PathName="c:\users\navil\desktop\programs\msa\xamrin\app\packages\xamarin.forms.2.3.2.127\lib\win81\xamarin.forms.platform.dll" HashGuid="6b938cd4-44c0-2618-7eb6-4caa3f482076" />
+    <ReferenceAssembly PathName="c:\users\navil\desktop\programs\msa\xamrin\app\packages\xamarin.forms.2.3.2.127\lib\win81\xamarin.forms.platform.winrt.dll" HashGuid="07994aa2-3382-4066-7150-6b749ac659d6" />
+    <ReferenceAssembly PathName="c:\users\navil\desktop\programs\msa\xamrin\app\packages\xamarin.forms.2.3.2.127\lib\win81\xamarin.forms.platform.winrt.tablet.dll" HashGuid="be70b7f3-05ad-48ad-bda6-3e680e6b0d12" />
+    <ReferenceAssembly PathName="c:\users\navil\desktop\programs\msa\xamrin\app\packages\xamarin.forms.2.3.2.127\lib\win81\xamarin.forms.xaml.dll" HashGuid="9f5b8117-9053-1f26-a531-a25956bccca6" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>
