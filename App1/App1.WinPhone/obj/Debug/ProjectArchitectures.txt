@@ -1,2 +1,0 @@
-C:\Users\navil\Desktop\programs\MSA\xamrin\New folder\App1\App1.WinPhone\App1.WinPhone.csproj;neutral
-C:\Users\navil\Desktop\programs\MSA\xamrin\New folder\App1\App1\App1.csproj;neutral
