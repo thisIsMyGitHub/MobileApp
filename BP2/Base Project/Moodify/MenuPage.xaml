@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Moodify.MenuPage"
+             Title ="Menu"
+             BackgroundColor = "#2B3337">
+  <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Center" >
+
+    
+
+    <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+      <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+        <Image Source="logo.jpg" Margin="0,15,0,0" />
+
+        <Image Source="pizza.jpg" Margin="0,0,0,0" />
+        <Image Source="pasta.jpg" Margin="0,25,0,0" />
+        <Image Source="burger.jpg" Margin="0,25,0,0" />
+        <Image Source="cola.jpg" Margin="0,25,0,0" />
+
+
+      </StackLayout>
+    </ScrollView>
+    <Label Text ="Copyright Stuff"  HorizontalOptions="Center" ></Label>
+  </StackLayout>
+</ContentPage>

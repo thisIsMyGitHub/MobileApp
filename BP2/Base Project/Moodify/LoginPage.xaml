@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Moodify.LoginPage"
+             Title ="Account"
+             BackgroundColor = "#282444">
+  <StackLayout >
+  <Button Text="See Timeline" TextColor="White" BackgroundColor="Red" Clicked="ViewTimeline_Clicked" />
+    <Image Source="logo.jpg" />
+  <ListView x:Name="TimelineList" HasUnevenRows="True">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="50*" />
+              <ColumnDefinition Width="50*" />
+              <ColumnDefinition Width="50*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="1" Text="{Binding Date}"/>
+            <Label Grid.Column="0" Text="{Binding Happiness}"/>
+            <Label Grid.Column="2" Text="{Binding Anger}"/>
+          </Grid>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+    
+  </ListView>
+  </StackLayout>
+</ContentPage>
