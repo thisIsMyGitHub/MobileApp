@@ -3,24 +3,48 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Moodify.HomePage"
              Title ="Home"
-             BackgroundColor = "#F3AD80">
+             BackgroundColor = "#2B3337">
 
   <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Center" >
     
-      <Image Source="logo.jpg" Margin="0,25,0,0" />
+      <Image Source="logo.jpg" Margin="0,15,0,0" />
     
     <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
       <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
         
         
-      <Label Text ="News" HorizontalOptions="Center" Font="Bold,20"  Margin="0,75,0,0" ></Label>
-    <Label Text ="We got a NEW APP!!!" Margin="0,10,0,0" ></Label>
-    <Label Text ="Specials"  HorizontalOptions="Center"  Margin="0,50,0,0" Font="Bold,20" ></Label>
-        <Label Text ="Copyright"  HorizontalOptions="Center" ></Label>
-        <Label Text ="Copyright"  HorizontalOptions="Center" ></Label>
-        <Label Text ="Copyright"  HorizontalOptions="Center" ></Label>
+      <Label Text ="News" HorizontalOptions="Center" Font="Bold,20" TextColor="White"  Margin="0,10,0,0" ></Label>
         
 
+        <ListView x:Name="NewsList" HasUnevenRows="True">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <Grid>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                  </Grid.RowDefinitions>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*" />
+                  </Grid.ColumnDefinitions>
+                  
+                  <Label Grid.Column="0" Grid.Row="0" Text="{Binding Desc}" TextColor="#E8E7E4"/>
+                  <Label Grid.Column="0" Grid.Row="1" Text ="Specials" TextColor="White" HorizontalOptions="Center"  Margin="0,10,0,0" Font="Bold,20" ></Label>
+                  <Label Grid.Column="0" Grid.Row="2" Text="{Binding Special}" TextColor="#E8E7E4" />
+
+                  <Image Grid.Column="0" Grid.Row="3" Source="{Binding item}" />
+                </Grid>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+        
+        
+        
+        
 
       </StackLayout>
     </ScrollView>

@@ -14,11 +14,13 @@ namespace Moodify
         private static AzureManager instance;
         private MobileServiceClient client;
         private IMobileServiceTable<Timeline> timelineTable;
+        private IMobileServiceTable<News> newsTable;
 
         private AzureManager()
         {
             this.client = new MobileServiceClient("http://ajasmobileapp.azurewebsites.net");
             this.timelineTable = this.client.GetTable<Timeline>();
+            this.newsTable = this.client.GetTable<News>();
         }
 
         public MobileServiceClient AzureClient
@@ -47,6 +49,17 @@ namespace Moodify
         public async Task<List<Timeline>> GetTimelines()
         {
             return await this.timelineTable.ToListAsync();
+        }
+
+
+        public async Task addNews(News news)
+        {
+            await this.newsTable.InsertAsync(news);
+        }
+
+        public async Task<List<News>> GetNews()
+        {
+            return await this.newsTable.ToListAsync();
         }
     }
 }

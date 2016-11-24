@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AzureManager.cs" />
+    <Compile Include="DataModels\News.cs" />
     <Compile Include="DataModels\Timeline.cs" />
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>

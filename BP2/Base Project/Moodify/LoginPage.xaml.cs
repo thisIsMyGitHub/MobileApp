@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 
 namespace Moodify
 {
@@ -15,6 +16,7 @@ namespace Moodify
         public LoginPage()
         {
             InitializeComponent();
+
         }
         private async void ViewTimeline_Clicked(Object sender, EventArgs e)
         {

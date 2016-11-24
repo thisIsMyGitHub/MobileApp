@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using Moodify.DataModels;
+using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace Moodify
 {
@@ -27,11 +29,12 @@ namespace Moodify
         }
 
         protected override void OnStart()
-		{
-			// Handle when your app starts
-		}
+        {
+           
 
-		protected override void OnSleep()
+        }
+
+        protected override void OnSleep()
 		{
 			// Handle when your app sleeps
 		}

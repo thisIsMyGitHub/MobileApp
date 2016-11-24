@@ -15,13 +15,22 @@ namespace Moodify
         {
             InitializeComponent();
         }
+
+
+            
         
+
+
+
         private async void mapCLicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new mapsPage());
         }
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
+            List<News> newss = await AzureManager.AzureManagerInstance.GetNews();
+            NewsList.ItemsSource = newss;
+
             base.OnAppearing();
             NavigationPage.SetHasNavigationBar(this, false);
         }
