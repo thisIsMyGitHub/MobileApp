@@ -10,16 +10,78 @@
 
     <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
       <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
-        <Image Source="logo.jpg" Margin="0,15,0,0" />
-
-        <Image Source="pizza.jpg" Margin="0,0,0,0" />
-        <Image Source="pasta.jpg" Margin="0,25,0,0" />
-        <Image Source="burger.jpg" Margin="0,25,0,0" />
-        <Image Source="cola.jpg" Margin="0,25,0,0" />
+        <Image Source="logo.jpg" Margin="0,10,0,0" />
 
 
+          <Image Source="pizza.jpg" Margin="0,0,0,0" />
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="25" />
+          </Grid.ColumnDefinitions>
+          
+        <Button  Grid.Column="0" Grid.Row="0" Text="Order" TextColor="White" BackgroundColor="#FF2B2E" Clicked="OrderPizza" />
+          <Label Grid.Column="2" Grid.Row="0" x:Name ="pizzaOrder" Text ="0" Font="Bold,30"  TextColor="White" ></Label>
+          <Button  Grid.Column="1" Grid.Row="0" Text="↓" TextColor="White" BackgroundColor="#FF2B2E" Clicked="downPizza" />
+          
+        </Grid>
+        <Image Source="pasta.jpg" Margin="0,10,0,0" />
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="25" />
+          </Grid.ColumnDefinitions>
+          
+        <Button Grid.Column="0" Grid.Row="0" Text="Order" TextColor="White" BackgroundColor="#FF2B2E" Clicked="OrderPasta" />
+          <Label Grid.Column="2" Grid.Row="0" x:Name ="pastaOrder" Text ="0" Font="Bold,30"  TextColor="White" ></Label>
+          <Button  Grid.Column="1" Grid.Row="0" Text="↓" TextColor="White" BackgroundColor="#FF2B2E" Clicked="downPasta" />
+        </Grid>
+        
+        
+        <Image Source="burger.jpg" Margin="0,10,0,0" />
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="50" />
+              <ColumnDefinition Width="25" />
+            </Grid.ColumnDefinitions>
+            
+        
+        <Button  Grid.Column="0" Grid.Row="0" Text="Order" TextColor="White" BackgroundColor="#FF2B2E" Clicked="OrderBurger" />
+          <Label Grid.Column="2" Grid.Row="0" x:Name ="burgerOrder" Text ="0" Font="Bold,30"  TextColor="White" ></Label>
+            <Button  Grid.Column="1" Grid.Row="0" Text="↓" TextColor="White" BackgroundColor="#FF2B2E" Clicked="downBurger" />
+          </Grid>
+
+        <Image Source="cola.jpg" Margin="0,10,0,0" />
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="25" />
+              </Grid.ColumnDefinitions>
+              
+        
+        <Button  Grid.Column="0" Grid.Row="0" Text="Order" TextColor="White" BackgroundColor="#FF2B2E" Clicked="OrderCola" />
+          <Label Grid.Column="2" Grid.Row="0" x:Name ="colaOrder" Text ="0" Font="Bold,30"  TextColor="White" ></Label>
+              <Button  Grid.Column="1" Grid.Row="0" Text="↓" TextColor="White" BackgroundColor="#FF2B2E" Clicked="downCola" />
+            </Grid>
+        
       </StackLayout>
     </ScrollView>
-    <Label Text ="Copyright Stuff"  HorizontalOptions="Center" ></Label>
+    
   </StackLayout>
 </ContentPage>
