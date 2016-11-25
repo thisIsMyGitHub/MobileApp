@@ -17,10 +17,6 @@ namespace Moodify
         }
 
 
-            
-        
-
-
 
         private async void mapCLicked(object sender, EventArgs e)
         {
@@ -34,5 +30,6 @@ namespace Moodify
             base.OnAppearing();
             NavigationPage.SetHasNavigationBar(this, false);
         }
+
     }
 }

@@ -33,6 +33,7 @@
     <Compile Include="AzureManager.cs" />
     <Compile Include="AzureManagerTwo.cs" />
     <Compile Include="DataModels\News.cs" />
+    <Compile Include="DataModels\Order.cs" />
     <Compile Include="DataModels\Prefs.cs" />
     <Compile Include="DataModels\Timeline.cs" />
     <Compile Include="DataModels\User.cs" />

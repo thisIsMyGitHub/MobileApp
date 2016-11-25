@@ -25,9 +25,9 @@
         <ColumnDefinition Width="*" />
         <ColumnDefinition Width="*" />
       </Grid.ColumnDefinitions>
-    <Button  Grid.Column="0" Grid.Row="0"  Text ="Login" Clicked="loginClicked"/>
+    <Button  Grid.Column="0" Grid.Row="0"  Text ="Login" Clicked="loginClicked" BackgroundColor="#FF2B2E"/>
     
-    <Button  Grid.Column="1" Grid.Row="0"  Text ="Sign-up" Clicked="signUpClicked"/>
+    <Button  Grid.Column="1" Grid.Row="0"  Text ="Sign-up" Clicked="signUpClicked" BackgroundColor="#FF2B2E"/>
 
     </Grid>
     </StackLayout>
@@ -41,16 +41,16 @@
       <Label Text ="Preferences" TextColor="Transparent" Font ="15"/>
       <Entry x:Name ="pf" Placeholder ="send us your food preferences" BackgroundColor="#2B3337"  />
       
-      <Button  Text ="Send" Clicked="prefClicked"/>
+      <Button  Text ="Send" Clicked="prefClicked" BackgroundColor="#FF2B2E" />
 
-      <Label Text="{Binding id}" TextColor="#E8E7E4"/>
       
-      
+
+
       
       
     </StackLayout>
-    
-    
+
+
     
     
     

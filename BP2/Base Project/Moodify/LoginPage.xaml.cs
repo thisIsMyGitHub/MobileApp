@@ -68,6 +68,10 @@ namespace Moodify
                 //if (loggedIn == true) this.loginStack.IsVisible = false;
                 LoggedLabel.Text = "Logged in as: " + user;
             }
+            else
+            {
+                mainLabel.Text = "incorrect Username or password";
+            }
         }
         private async void prefClicked(object sender, EventArgs e) {
             string prefs = pf.Text;
@@ -104,6 +108,8 @@ namespace Moodify
             if (authenticated == true)
                 this.loginButton.IsVisible = false;
         }
+
+
 
     }
 }

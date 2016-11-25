@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Moodify.DataModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Moodify
 {
     public partial class MenuPage : ContentPage
     {
+
         public MenuPage()
         {
             InitializeComponent();
@@ -69,6 +71,29 @@ namespace Moodify
             if (x > 0) x--;
             colaOrder.Text = x.ToString();
         }
+
+        private async void Confirm(object sender, EventArgs e)
+        {
+            Order ord = new Order()
+            {
+                pizza = pizzaOrder.Text,
+                pasta = pastaOrder.Text,
+                burger = burgerOrder.Text,
+                cola = colaOrder.Text
+
+            };
+
+            await AzureManager.AzureManagerInstance.AddOrder(ord);
+            await DisplayAlert("Confirmed", "Order Placed", "OK");
+
+            pizzaOrder.Text = "0";
+            pastaOrder.Text = "0";
+            burgerOrder.Text = "0";
+            colaOrder.Text = "0";
+        }
+
+
+
 
     }
 }

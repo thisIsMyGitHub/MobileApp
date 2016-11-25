@@ -17,6 +17,7 @@ namespace Moodify
         private IMobileServiceTable<News> newsTable;
         private IMobileServiceTable<User> userTable;
         private IMobileServiceTable<Prefs> prefTable;
+        private IMobileServiceTable<Order> orderTable;
 
 
         private AzureManager()
@@ -26,6 +27,7 @@ namespace Moodify
             this.newsTable = this.client.GetTable<News>();
             this.userTable = this.client.GetTable<User>();
             this.prefTable = this.client.GetTable<Prefs>();
+            this.orderTable = this.client.GetTable<Order>();
         }
 
         public MobileServiceClient AzureClient
@@ -96,6 +98,11 @@ namespace Moodify
         public async Task<List<Prefs>> GetPrefs()
         {
             return await this.prefTable.ToListAsync();
+        }
+
+        public async Task AddOrder (Order order)
+        {
+            await this.orderTable.InsertAsync(order);
         }
     }
 }
