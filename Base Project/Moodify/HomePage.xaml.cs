@@ -15,12 +15,21 @@ namespace Moodify
         {
             InitializeComponent();
         }
-        private async void ViewTimeline_Clicked(Object sender, EventArgs e)
+
+
+
+        private async void mapCLicked(object sender, EventArgs e)
         {
-            List<Timeline> timelines = await AzureManager.AzureManagerInstance.GetTimelines();
-
-            TimelineList.ItemsSource = timelines;
-
+            await Navigation.PushModalAsync(new mapsPage());
         }
+        protected override async void OnAppearing()
+        {
+            List<News> newss = await AzureManager.AzureManagerInstance.GetNews();
+            NewsList.ItemsSource = newss;
+
+            base.OnAppearing();
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+
     }
 }

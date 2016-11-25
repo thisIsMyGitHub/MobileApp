@@ -2,6 +2,59 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Moodify.LoginPage"
-             Title ="Account">
-  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+             Title ="Account"
+             BackgroundColor = "#2B3337">
+  <StackLayout >
+  
+    <Image Source="logo.jpg" Margin="0,10,0,0" />
+    <Label x:Name ="LoggedLabel" TextColor="#E8E7E4" Font ="20"/>
+    <StackLayout x:Name ="loginStack" IsVisible="false">
+      <Label x:Name ="mainLabel" HorizontalTextAlignment="Center"/>
+     
+    <Entry x:Name ="username" Placeholder ="Username" BackgroundColor="#E8E7E4"  />
+
+    <Entry x:Name ="password" IsPassword="true"  Margin="0,20,0,0" BackgroundColor="#E8E7E4"
+           Placeholder ="Password"/>
+
+    
+    <Grid Margin="0,20,0,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+    <Button  Grid.Column="0" Grid.Row="0"  Text ="Login" Clicked="loginClicked" BackgroundColor="#FF2B2E"/>
+    
+    <Button  Grid.Column="1" Grid.Row="0"  Text ="Sign-up" Clicked="signUpClicked" BackgroundColor="#FF2B2E"/>
+
+    </Grid>
+    </StackLayout>
+
+
+
+
+
+
+    <StackLayout x:Name ="loggedInStack" IsVisible="false">
+      <Label Text ="Preferences" TextColor="Transparent" Font ="15"/>
+      <Entry x:Name ="pf" Placeholder ="send us your food preferences" BackgroundColor="#2B3337"  />
+      
+      <Button  Text ="Send" Clicked="prefClicked" BackgroundColor="#FF2B2E" />
+
+      
+
+
+      
+      
+    </StackLayout>
+
+
+    
+    
+    
+    <Button x:Name="loginButton" Text="Facebook Sign-in" TextColor="White" MinimumHeightRequest="30"  VerticalOptions="Center" HorizontalOptions="Center"
+   BackgroundColor="#1B48FF" Font="Bold" Clicked="loginButton_Clicked"/>
+  </StackLayout>
 </ContentPage>

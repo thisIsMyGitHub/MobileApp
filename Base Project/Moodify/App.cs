@@ -1,34 +1,51 @@
-﻿using Xamarin.Forms;
-
+﻿using Moodify.DataModels;
+using System.Collections.Generic;
+using Xamarin.Forms;
+using System.Threading.Tasks;
 namespace Moodify
 {
-	public partial class App : Application
+    public interface IAuthenticate
+    {
+        Task<bool> Authenticate();
+    }
+
+    public partial class App : Application
 	{
+        public static IAuthenticate Authenticator { get; private set; }
+
+        public static void Init(IAuthenticate authenticator)
+        {
+            Authenticator = authenticator;
+        }
 
         public static NavigationPage NavigationPage { get; private set; }
 
         public App()
         {
 
-            // MainPage = new NavigationPage (new HomePage());
+
             MainPage = new TabbedPage
             {
+                
                 Children =
                 {
                     new HomePage(),
                     new MenuPage(),
-                    new LoginPage()
+                    new LoginPage(),
+                    
+                    
                 }
 
             };
         }
 
         protected override void OnStart()
-		{
-			// Handle when your app starts
-		}
+        {
+           
 
-		protected override void OnSleep()
+        }
+
+        protected override void OnSleep()
 		{
 			// Handle when your app sleeps
 		}
